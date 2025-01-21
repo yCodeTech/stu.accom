@@ -1,0 +1,12 @@
+# vscode
+.vscode
+
+# Zipped folder
+*.zip
+
+# Database
+## Dump
+*.sql
+
+## Credentials
+*config.php
