@@ -14,6 +14,8 @@ function validatePassword($email, $password) {
 			// Set role session.
 			$_SESSION["userRole"] = $row['role'];
 			$_SESSION["userID"] = $row['user_id'];
+			// Added after uni.
+			$_SESSION["userEmail"] = $row['email'];
 			
 			return true;
 		}

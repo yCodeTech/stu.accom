@@ -88,7 +88,21 @@ elseif (isLoggedIn() && $action === "profile") {
 
 /* Delete Account */
 elseif ($action === "deleteAccount") {
-	deleteAccount($_SESSION["userID"]);
+	// Added if statement after uni.
+	$userTestEmails = [
+		"student@outlook.com",
+		"landlord@outlook.com"
+	];
+
+	// If user test emails array does NOT include the email from the session.
+	// Ensures we can't delete test accounts.
+	if(!in_array($_SESSION["userEmail"], $userTestEmails)) {
+		// Delete account.
+		deleteAccount($_SESSION["userID"]);
+	}
+	else {
+		echo "Can't delete test accounts.";
+	}
 }
 
 /* Add New Acccommodation */

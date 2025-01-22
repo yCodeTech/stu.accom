@@ -45,13 +45,23 @@ $('.deleteAccount a').on("click", function () {
 			confirm: {
 				btnClass: 'btn-red',
 				action: function () {
-					// Delete account
+					// Added if statement after uni.
+					const userTestEmails = [
+						"student@outlook.com",
+						"landlord@outlook.com",
+					];
 
-					// Redirect to the action deleteAccount
+					// If user test emails array does NOT include the email from the input.
+					// Ensures we can't delete test accounts.
+					if (!userTestEmails.includes($("input#email").val())) {
+						// Delete account
 
-					const path = window.location.pathname;
-					const url = `${path}?action=deleteAccount`;
-					window.location.href = url;
+						// Redirect to the action deleteAccount
+
+						const path = window.location.pathname;
+						const url = `${path}?action=deleteAccount`;
+						window.location.href = url;
+					}
 				},
 			},
 			cancel: {}
