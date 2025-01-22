@@ -4,7 +4,7 @@ Stu.Accom was a team project in my 2nd year of Web Programming BSc(Hons) at Univ
 
 The working website can be accessed on my [dev server](https://stu-accom.ycodetech.co.uk/).
 
-All code was developed by me, unless otherwise stated in the file.
+All code was developed by me (the Lead Developer), unless otherwise stated in the file.
 
 ### Dev Test Login:
 
